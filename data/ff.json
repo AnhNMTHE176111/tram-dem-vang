@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-10-20T12:53:37.185Z",
+ "fetchedAt": "2026-10-20T18:46:46.106Z",
  "events": [
   {
    "title": "IMF Meetings",
@@ -310,7 +310,7 @@
   {
    "title": "GDT Price Index",
    "country": "NZD",
-   "date": "2026-10-20T10:50:00-04:00",
+   "date": "2026-10-20T11:19:00-04:00",
    "impact": "Low",
    "forecast": "",
    "previous": "1.2%",
