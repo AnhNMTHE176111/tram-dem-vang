@@ -44,7 +44,7 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
 .clock { font-size: 18px; font-variant-numeric: tabular-nums; }
 .phase { color: var(--muted); font-size: 13px; }
 .statusbar.bad .phase, .statusbar.warn .phase { color: inherit; opacity: .85; }
-.notice { padding: 6px 16px; background: var(--accent-bg); color: var(--accent-text); font-size: 13px; border-top: 1px solid var(--line); }
+.notice { padding: 2px 16px; line-height: 1.35; background: var(--accent-bg); color: var(--accent-text); font-size: 13px; border-top: 1px solid var(--line); }
 
 .chip { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; border-radius: 999px; border: 1px solid var(--line); background: var(--panel2); font-size: 13px; line-height: 1.6; white-space: nowrap; }
 .chip.good { border-color: var(--go); color: var(--go); }
