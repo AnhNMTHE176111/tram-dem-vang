@@ -332,10 +332,6 @@
     { code: 'WAIT_CAPITAL', scope: 'ABCD', effect: 'WAIT', when: function (c) {
       return c.calc.numsOk && c.calc.slSideOk && !(num(c.settings.capital) > 0 && num(c.settings.riskPct) > 0);
     } },
-    // thiếu vốn hoặc % rủi ro: không tính được số hợp đồng ⇒ CHỜ, trỏ tới nút "Đổi vốn" (REVIEW-3 mục 6)
-    { code: 'WAIT_CAPITAL', scope: 'ABCD', effect: 'WAIT', when: function (c) {
-      return c.calc.numsOk && c.calc.slSideOk && !(num(c.settings.capital) > 0 && num(c.settings.riskPct) > 0);
-    } },
     // QĐ-21: chỉ khi CỠ CHUẨN (đủ, chưa giảm ½) dưới 1 hợp đồng; cỡ ½ không chia được thì 1 hợp đồng tối thiểu
     { code: 'NO_SIZE_ZERO', scope: 'ABCD', effect: 'NO', when: function (c) { return c.calc.numsOk && c.calc.slSideOk && c.sizeOf() !== null && c.calc.sizeFull === 0; } }
   ];
