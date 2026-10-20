@@ -190,13 +190,18 @@
     var segEl = ui.seg([{ v: 'market', label: 'market' }, { v: 'limit', label: 'limit' }], kind, function (v) { kind = v || 'market'; refreshHint(); markSel(); }, { noToggle: true, label: T('enterKind') });
     function markSel() { segEl.querySelectorAll('.opt').forEach(function (b) { var on = b.dataset.v === kind; b.classList.toggle('sel', on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); }); }
     var hint = h('p', { class: 'muted' });
+    var warnBox = h('div', { class: 'priceerr', 'data-testid': 'price-err' });
     function refreshHint() { hint.textContent = kind === 'market' ? T('enterMarketHint') : T('enterLimitHint'); }
     refreshHint();
     var content = h('div', { class: 'dlg' }, h('h3', { text: T('enterTitle') }),
       h('div', { class: 'ctl' }, h('div', { class: 'ctl-label', text: T('enterKind') }), segEl),
-      h('div', { class: 'ctl' }, h('div', { class: 'ctl-label', text: T('enterPrice') }), priceWrap), hint,
+      h('div', { class: 'ctl' }, h('div', { class: 'ctl-label', text: T('enterPrice') }), priceWrap), hint, warnBox,
       h('div', { class: 'actions' }, btn(T('cancel'), function () { closeModal(false); }, 'ghost'),
-        btn(T('enterConfirm'), function () { closeModal(true); app.enter({ kind: kind, price: price }); }, 'primary big', { 'data-testid': 'enter-confirm' })));
+        btn(T('enterConfirm'), function () {
+          var bad = J.priceProblem(price, res.calc.entry);
+          if (bad) { ui.clear(warnBox).appendChild(ui.banner(T(bad, { n: 20, ref: J.fmt(res.calc.entry) }), 'bad')); return; }
+          closeModal(true); app.enter({ kind: kind, price: price });
+        }, 'primary big', { 'data-testid': 'enter-confirm' })));
     openModal(content);
   };
   app.enter = function (o) {
@@ -223,9 +228,21 @@
       app.toast(paper ? T('enteredPaper') : T('forcedToast'));
     });
   };
+  // QĐ-25: Kèo mới giữ C1–C3 và C6; Xóa hết bỏ cả kèo; bấm thẻ kịch bản đang tắt thì hiện lý do (không im lặng)
+  app.newSetup = function () {
+    app.ui.canhOpen = true; app.ui.jumpDone = false; app.ui.offPick = null;
+    app.update(function (n) { n.setup = J.newSetupKeep(n.setup); });
+    app.toast(T('newSetupDone'));
+  };
+  app.clearSetup = function () {
+    app.ui.canhOpen = true; app.ui.jumpDone = false; app.ui.offPick = null;
+    app.update(function (n) { n.setup = {}; });
+    app.toast(T('clearAllDone'));
+  };
+  app.pickOff = function (scen, why) { app.ui.offPick = { scen: scen, why: why }; render({ keep: false }); };
   app.focusCtl = function (id) {
     if (!id) return;
-    app.ui.sub = /^b/.test(id) ? 'bam' : 'canh';
+    if (id !== 'b3' && id !== 'b4') app.ui.canhOpen = true;   // ô của Canh nằm trong khối đang gập thì mở ra
     app.tier = 3;
     render();
     var t = document.querySelector('[data-ctl="' + id + '"]');
@@ -346,16 +363,17 @@
       setSetup(function (s0) { s0.side = side; });
     } else if ((k === 'u' || k === 'U' || k === 'v' || k === 'V') && res.scenario && res.scenario !== 'C') {
       var v = (k === 'u' || k === 'U') ? 'U' : 'V';
-      app.ui.sub = 'bam';
       setSetup(function (s0) { s0.b1 = v; });
     } else if (k === 'Enter') {
       if (res.verdict === 'ENTRY') { if (res.paper) app.enter({ kind: 'market', paper: true }); else app.openEnter(); e.preventDefault(); }
+    } else if ((k === 'đ' || k === 'Đ' || k === 'd' || k === 'D') && res.scenario) {
+      setSetup(function (s0) { s0.b3 = 'ok'; });   // Đ = nến xác nhận đạt chuẩn
     } else if (k === 'n' || k === 'N') {
-      app.ui.sub = 'canh'; app.update(function (n) { n.setup = {}; }); app.toast(T('newSetupDone'));
+      app.newSetup();
     }
   });
   function openKeys() {
-    var rows = ['1', '2', '3', '4', 'B / S', 'U / V', 'Enter', 'N', 'Esc', '?'].map(function (k, i) { return h('div', { class: 'kv' }, h('span', { class: 'k' }, h('kbd', { text: k })), h('span', { class: 'v', text: T('key' + i) })); });
+    var rows = ['1', '2', '3', '4', 'B / S', 'U / V', 'Đ', 'Enter', 'N', 'Esc', '?'].map(function (k, i) { return h('div', { class: 'kv' }, h('span', { class: 'k' }, h('kbd', { text: k })), h('span', { class: 'v', text: T('key' + i) })); });
     openModal(h('div', { class: 'dlg' }, h('h3', { text: T('keysTitle') }), rows, h('div', { class: 'actions' }, btn(T('close'), function () { closeModal(false); }, 'primary'))));
   }
 
@@ -378,9 +396,12 @@
         none.hidden = any;
       } });
     document.querySelectorAll('.pop').forEach(function (p) { p.setAttribute('hidden', ''); });
-    var bd = openModal(h('div', { class: 'dlg glossarybox', 'data-testid': 'glossary' }, h('h3', { text: T('glossaryTitle') }), h('p', { class: 'muted', text: T('glossaryHint') }), search, dl, none,
-      h('div', { class: 'actions' }, btn(T('close'), function () { closeModal(false); }, 'primary'))));
+    var bd = openModal(h('div', { class: 'dlg glossarybox', 'data-testid': 'glossary' },
+      h('div', { class: 'ghead' }, h('h3', { text: T('glossaryTitle') }), h('button', { type: 'button', class: 'gclose', 'aria-label': T('close'), text: '✕', onclick: function () { closeModal(false); } }),
+        h('p', { class: 'muted', text: T('glossaryHint') }), search), dl, none));
+    bd.classList.add('gloss-modal');
     var box = bd.querySelector('.glossarybox');
+    search.focus();
     if (root.innerWidth <= 600) search.blur();   // điện thoại: không tự bật bàn phím che nửa danh sách
     box.scrollTop = 0; bd.querySelector('.modal').scrollTop = 0;
     var hit = key && items.filter(function (it) { return it.g.key === key; })[0];
