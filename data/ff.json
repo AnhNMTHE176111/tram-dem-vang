@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-10-21T05:14:03.928Z",
+ "fetchedAt": "2026-10-21T10:17:56.873Z",
  "events": [
   {
    "title": "IMF Meetings",
@@ -434,15 +434,6 @@
    "actual": ""
   },
   {
-   "title": "Foreign Direct Investment ytd/y",
-   "country": "CNY",
-   "date": "2026-10-21T05:10:00-04:00",
-   "impact": "Low",
-   "forecast": "",
-   "previous": "-5.3%",
-   "actual": ""
-  },
-  {
    "title": "German Buba Monthly Report",
    "country": "EUR",
    "date": "2026-10-21T06:00:00-04:00",
@@ -485,6 +476,15 @@
    "impact": "Low",
    "forecast": "",
    "previous": "",
+   "actual": ""
+  },
+  {
+   "title": "Foreign Direct Investment ytd/y",
+   "country": "CNY",
+   "date": "2026-10-22T05:10:00-04:00",
+   "impact": "Low",
+   "forecast": "",
+   "previous": "-5.3%",
    "actual": ""
   },
   {
