@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-10-21T15:22:21.137Z",
+ "fetchedAt": "2026-10-21T19:32:33.761Z",
  "events": [
   {
    "title": "IMF Meetings",
@@ -555,7 +555,7 @@
    "country": "USD",
    "date": "2026-10-22T10:30:00-04:00",
    "impact": "Low",
-   "forecast": "83B",
+   "forecast": "80B",
    "previous": "67B",
    "actual": ""
   },
@@ -726,7 +726,7 @@
    "country": "USD",
    "date": "2026-10-23T09:45:00-04:00",
    "impact": "Medium",
-   "forecast": "57.8",
+   "forecast": "57.9",
    "previous": "58.7",
    "actual": ""
   },
