@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-10-30T14:18:57.331Z",
+ "fetchedAt": "2026-10-30T19:29:41.608Z",
  "events": [
   {
    "title": "IMF Meetings",
@@ -1625,6 +1625,15 @@
    "title": "FOMC Member Musalem Speaks",
    "country": "USD",
    "date": "2026-10-30T12:30:00-04:00",
+   "impact": "Low",
+   "forecast": "",
+   "previous": "",
+   "actual": ""
+  },
+  {
+   "title": "FOMC Member Logan Speaks",
+   "country": "USD",
+   "date": "2026-10-30T13:30:00-04:00",
    "impact": "Low",
    "forecast": "",
    "previous": "",
