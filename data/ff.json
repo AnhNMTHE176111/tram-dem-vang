@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-11-02T20:16:23.420Z",
+ "fetchedAt": "2026-11-03T02:26:11.388Z",
  "events": [
   {
    "title": "IMF Meetings",
@@ -1959,7 +1959,7 @@
    "country": "USD",
    "date": "2026-11-03T10:00:00-05:00",
    "impact": "Medium",
-   "forecast": "7.11M",
+   "forecast": "7.15M",
    "previous": "7.08M",
    "actual": ""
   },
@@ -1977,7 +1977,7 @@
    "country": "USD",
    "date": "2026-11-03T10:15:00-05:00",
    "impact": "Low",
-   "forecast": "15.9M",
+   "forecast": "15.8M",
    "previous": "16.0M",
    "actual": ""
   },
@@ -2085,7 +2085,7 @@
    "country": "CNY",
    "date": "2026-11-03T20:45:00-05:00",
    "impact": "Low",
-   "forecast": "51.5",
+   "forecast": "51.7",
    "previous": "51.6",
    "actual": ""
   },
@@ -2094,7 +2094,7 @@
    "country": "EUR",
    "date": "2026-11-04T03:00:00-05:00",
    "impact": "Low",
-   "forecast": "25.3K",
+   "forecast": "18.7K",
    "previous": "23.6K",
    "actual": ""
   },
@@ -2103,7 +2103,7 @@
    "country": "EUR",
    "date": "2026-11-04T03:15:00-05:00",
    "impact": "Low",
-   "forecast": "57.5",
+   "forecast": "57.6",
    "previous": "58.3",
    "actual": ""
   },
@@ -2112,7 +2112,7 @@
    "country": "EUR",
    "date": "2026-11-04T03:45:00-05:00",
    "impact": "Low",
-   "forecast": "51.0",
+   "forecast": "51.4",
    "previous": "51.7",
    "actual": ""
   },
@@ -2175,7 +2175,7 @@
    "country": "USD",
    "date": "2026-11-04T08:15:00-05:00",
    "impact": "Low",
-   "forecast": "68K",
+   "forecast": "67K",
    "previous": "90K",
    "actual": ""
   },
@@ -2184,7 +2184,7 @@
    "country": "CAD",
    "date": "2026-11-04T08:30:00-05:00",
    "impact": "Low",
-   "forecast": "3.8B",
+   "forecast": "4.8B",
    "previous": "4.2B",
    "actual": ""
   },
@@ -2211,7 +2211,7 @@
    "country": "USD",
    "date": "2026-11-04T10:00:00-05:00",
    "impact": "Medium",
-   "forecast": "54.9",
+   "forecast": "54.8",
    "previous": "54.9",
    "actual": ""
   },
@@ -2238,7 +2238,7 @@
    "country": "AUD",
    "date": "2026-11-04T19:30:00-05:00",
    "impact": "Low",
-   "forecast": "0.96B",
+   "forecast": "0.94B",
    "previous": "0.50B",
    "actual": ""
   },
@@ -2265,7 +2265,7 @@
    "country": "EUR",
    "date": "2026-11-05T02:00:00-05:00",
    "impact": "Low",
-   "forecast": "4.9%",
+   "forecast": "4.6%",
    "previous": "-10.6%",
    "actual": ""
   },
@@ -2274,7 +2274,7 @@
    "country": "EUR",
    "date": "2026-11-05T02:45:00-05:00",
    "impact": "Low",
-   "forecast": "0.4%",
+   "forecast": "0.3%",
    "previous": "-0.3%",
    "actual": ""
   },
@@ -2292,7 +2292,7 @@
    "country": "EUR",
    "date": "2026-11-05T04:00:00-05:00",
    "impact": "Low",
-   "forecast": "0.1%",
+   "forecast": "0.0%",
    "previous": "0.3%",
    "actual": ""
   },
@@ -2301,7 +2301,7 @@
    "country": "GBP",
    "date": "2026-11-05T04:30:00-05:00",
    "impact": "Low",
-   "forecast": "46.5",
+   "forecast": "46.4",
    "previous": "46.1",
    "actual": ""
   },
@@ -2310,7 +2310,7 @@
    "country": "EUR",
    "date": "2026-11-05T05:00:00-05:00",
    "impact": "Low",
-   "forecast": "2.6%",
+   "forecast": "2.5%",
    "previous": "1.9%",
    "actual": ""
   },
@@ -2499,7 +2499,7 @@
    "country": "EUR",
    "date": "2026-11-06T02:00:00-05:00",
    "impact": "Low",
-   "forecast": "-0.2%",
+   "forecast": "0.0%",
    "previous": "2.0%",
    "actual": ""
   },
@@ -2589,7 +2589,7 @@
    "country": "CAD",
    "date": "2026-11-06T08:30:00-05:00",
    "impact": "High",
-   "forecast": "14.5K",
+   "forecast": "14.6K",
    "previous": "-68.3K",
    "actual": ""
   },
@@ -2598,7 +2598,7 @@
    "country": "USD",
    "date": "2026-11-06T08:30:00-05:00",
    "impact": "High",
-   "forecast": "63K",
+   "forecast": "65K",
    "previous": "29K",
    "actual": ""
   },
@@ -2643,7 +2643,7 @@
    "country": "USD",
    "date": "2026-11-06T10:00:00-05:00",
    "impact": "Medium",
-   "forecast": "47.8",
+   "forecast": "48.1",
    "previous": "46.3",
    "actual": ""
   },
@@ -2679,7 +2679,7 @@
    "country": "USD",
    "date": "2026-11-06T15:00:00-05:00",
    "impact": "Low",
-   "forecast": "12.0B",
+   "forecast": "13.4B",
    "previous": "8.3B",
    "actual": ""
   },
