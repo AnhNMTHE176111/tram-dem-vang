@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-11-20T10:24:13.063Z",
+ "fetchedAt": "2026-11-20T18:46:22.475Z",
  "events": [
   {
    "title": "IMF Meetings",
@@ -2999,6 +2999,15 @@
    "actual": ""
   },
   {
+   "title": "HMRC Payrolls Change",
+   "country": "GBP",
+   "date": "2026-11-17T02:00:00-05:00",
+   "impact": "Low",
+   "forecast": "9K",
+   "previous": "13K",
+   "actual": ""
+  },
+  {
    "title": "Unemployment Rate",
    "country": "GBP",
    "date": "2026-11-17T02:00:00-05:00",
@@ -3797,6 +3806,15 @@
    "impact": "Medium",
    "forecast": "",
    "previous": "4.3%",
+   "actual": ""
+  },
+  {
+   "title": "President Trump Speaks",
+   "country": "USD",
+   "date": "2026-11-20T12:00:00-05:00",
+   "impact": "Medium",
+   "forecast": "",
+   "previous": "",
    "actual": ""
   },
   {
