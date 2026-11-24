@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-11-24T06:30:17.561Z",
+ "fetchedAt": "2026-11-24T18:12:33.062Z",
  "events": [
   {
    "title": "IMF Meetings",
@@ -4034,21 +4034,21 @@
    "actual": ""
   },
   {
+   "title": "CB Leading Index m/m",
+   "country": "CNY",
+   "date": "2026-11-24T08:51:00-05:00",
+   "impact": "Low",
+   "forecast": "",
+   "previous": "-0.1%",
+   "actual": ""
+  },
+  {
    "title": "Belgian NBB Business Climate",
    "country": "EUR",
    "date": "2026-11-24T09:00:00-05:00",
    "impact": "Low",
    "forecast": "-9.4",
    "previous": "-9.8",
-   "actual": ""
-  },
-  {
-   "title": "CB Leading Index m/m",
-   "country": "CNY",
-   "date": "2026-11-24T09:00:00-05:00",
-   "impact": "Low",
-   "forecast": "",
-   "previous": "-0.1%",
    "actual": ""
   },
   {
