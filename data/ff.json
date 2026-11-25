@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-11-25T11:41:31.674Z",
+ "fetchedAt": "2026-11-25T20:41:46.796Z",
  "events": [
   {
    "title": "IMF Meetings",
@@ -4265,6 +4265,15 @@
    "impact": "Low",
    "forecast": "201K",
    "previous": "203K",
+   "actual": ""
+  },
+  {
+   "title": "Monetary Policy Report Hearings",
+   "country": "GBP",
+   "date": "2026-11-25T09:15:00-05:00",
+   "impact": "Medium",
+   "forecast": "",
+   "previous": "",
    "actual": ""
   },
   {
