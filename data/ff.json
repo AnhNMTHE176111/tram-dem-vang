@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-11-24T18:12:33.062Z",
+ "fetchedAt": "2026-11-25T02:35:47.732Z",
  "events": [
   {
    "title": "IMF Meetings",
@@ -4187,6 +4187,15 @@
    "actual": ""
   },
   {
+   "title": "FOMC Member Bowman Speaks",
+   "country": "USD",
+   "date": "2026-11-25T07:25:00-05:00",
+   "impact": "Low",
+   "forecast": "",
+   "previous": "",
+   "actual": ""
+  },
+  {
    "title": "Core Durable Goods Orders m/m",
    "country": "USD",
    "date": "2026-11-25T08:30:00-05:00",
@@ -4453,7 +4462,7 @@
    "date": "2026-11-27T05:33:00-05:00",
    "impact": "Low",
    "forecast": "",
-   "previous": "",
+   "previous": "4.49|1.6",
    "actual": ""
   },
   {
