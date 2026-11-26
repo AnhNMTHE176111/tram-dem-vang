@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-11-25T20:41:46.796Z",
+ "fetchedAt": "2026-11-26T03:13:27.372Z",
  "events": [
   {
    "title": "IMF Meetings",
@@ -4355,6 +4355,15 @@
    "impact": "Low",
    "forecast": "3.2%",
    "previous": "3.1%",
+   "actual": ""
+  },
+  {
+   "title": "Euro Summit",
+   "country": "EUR",
+   "date": "2026-11-26T04:15:00-05:00",
+   "impact": "Low",
+   "forecast": "",
+   "previous": "",
    "actual": ""
   },
   {
